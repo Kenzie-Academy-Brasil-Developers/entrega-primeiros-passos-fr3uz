@@ -1,22 +1,24 @@
-const refrigerante = 11.99;
-const macarrao = 6.99;
-const ervilha = 6.99;
-const arroz = 22.99;
-const feijao = 11.89;
-const vinho = 70.00;
+const refrigerante = 12;
+const macarrao = 7;
+const ervilha = 7;
+const arroz = 23;
+const feijao = 12;
+const vinho = 70;
 
-const totalDaCompra = (refrigerante * 3 + macarrao * 4 + ervilha * 3 + arroz * 3 + feijao * 2 + vinho * 3);
-const totalDaCompra2 = (refrigerante * 3 + macarrao * 4 + ervilha * 3 + arroz * 3 + feijao * 2);
+const totalDaCompra = (3*refrigerante + 4*macarrao  + 3*ervilha  + 3*arroz  + 2*feijao  + 3*vinho );
+const totalDaCompra2 = (3*refrigerante  + 4*macarrao  + 3*ervilha  + 3*arroz  + 2*feijao);
 console.log("O total da compra foi: R$ " + totalDaCompra);
 
-if (totalDaCompra % 2 === 0) {
+var conta = (totalDaCompra2 / 2)
+var conta2 = (conta + 3*vinho)
+
+if (totalDaCompra % 2 == 0) {
     
-    console.log("Deu par! Por isso, cada um deverá pagar: R$ " + totalDaCompra2 /2);
+    console.log(" Deu par! Um deles pagará " + conta + " e o outro " + conta2 );
 }
 else {
-    console.log("Deu ímpar! Por isso, cada um deverá pagar: R$ " + totalDaCompra /2);
+    console.log(" Deu ímpar! Cada um pagará " + totalDaCompra / 2);
 }
-
 
 let precoRefrigerante = refrigerante
 let quantidadeRefrigerante = parseInt(prompt("Quantas garrafas de refrigerante?"))
@@ -52,14 +54,15 @@ let superTotal = (total1 + total2 + total3 + total4 + total5 + total6);
 
 let superTotal2 = (total1 + total2 + total3 + total4 + total5);
 
+var valor = (superTotal2 / 2);
+var valor2 = (valor / 2);
+
 alert(`Valor total da compra: ${superTotal}`)
 
-if (superTotal % 2 === 0) {
+if (superTotal % 2 == 0) {
 
-    alert(`Cada um deverá pagar: ${superTotal /2}`)
-
+    alert(`Um deverá pagar ${valor} E o outro deverá pagar ${superTotal - valor}`)
 }
-
 else {
-    alert(`Cada um deverá pagar: ${superTotal2 /2}`)
+    alert(`Cada um deverá pagar: ${superTotal / 2}`)
 }
